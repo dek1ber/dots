@@ -29,6 +29,10 @@ alias -s py=nvim
 alias -s c=subl
 alias -s h=subl
 
+# Keybinds
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Randos
 setopt autocd
 stty stop undef
