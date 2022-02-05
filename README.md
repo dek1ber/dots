@@ -5,13 +5,13 @@ These dot files are intended for use on any linux distro, but all the dependenci
 > git clone https://github.com/KevinKusiak/dots.git
 
 # Dependencies
-	sudo pacman -Syy xorg-server xorg-xinit xorg-xsetroot xorg-xrandr firefox nitrogen picom git go bspwm neovim polybar sxhkd terminator zsh libxft-bgra gcc make dmenu base-devel
+	sudo pacman -Syy xorg-server xorg-xinit xorg-xsetroot xorg-xrandr firefox nitrogen picom git go bspwm neovim polybar sxhkd terminator zsh  gcc make dmenu base-devel
 
 ## AUR Dependencies
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
-	yay -Syy ttf-joypixels ttf-jetbrains-mono nerd-fonts-hack noto-color-emoji-fontconfig gimp thunderbird sublime-text-4
+	yay -Syy ttf-joypixels ttf-jetbrains-mono nerd-fonts-hack noto-color-emoji-fontconfig gimp thunderbird sublime-text-3 libxft-bgra
 
 ## Cleaning Up
 	cd 
