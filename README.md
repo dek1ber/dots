@@ -5,7 +5,7 @@ These dot files are intended for use on any linux distro, but all the dependenci
 > git clone https://github.com/KevinKusiak/dots.git
 
 # Dependencies
-	sudo pacman -Syy xorg-server xorg-xinit xorg-xsetroot xorg-xrandr firefox nitrogen picom git go bspwm neovim polybar sxhkd terminator zsh libxft-bgra gcc make dmenu
+	sudo pacman -Syy xorg-server xorg-xinit xorg-xsetroot xorg-xrandr firefox nitrogen picom git go bspwm neovim polybar sxhkd terminator zsh libxft-bgra gcc make dmenu base-devel
 
 ## AUR Dependencies
 	git clone https://aur.archlinux.org/yay.git
