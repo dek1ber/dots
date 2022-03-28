@@ -11,7 +11,7 @@ These dot files are intended for use on any linux distro, but all the dependenci
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
-	yay -Syy ttf-joypixels ttf-jetbrains-mono nerd-fonts-hack noto-color-emoji-fontconfig gimp thunderbird sublime-text-3 libxft-bgra
+	yay -Syy ttf-joypixels ttf-jetbrains-mono nerd-fonts-hack noto-color-emoji-fontconfig gimp sublime-text-4 libxft-bgra
 
 ## Cleaning Up
 	cd 
