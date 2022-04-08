@@ -1,1 +1,0 @@
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("/home/k1ber/.config/dwm/" ("README.org" "LICENSE" "Makefile" "config.h" "config.mk" "drw.c" "drw.h" "dwm" "dwm.1" "dwm.c" "transient.c" "util.c" "util.h")))

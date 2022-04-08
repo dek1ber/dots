@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/themes/doom-themes.el

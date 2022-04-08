@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/dired-git-info/dired-git-info.el

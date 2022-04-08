@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/js2-mode/js2-imenu-extras.el

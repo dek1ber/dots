@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/package-lint/package-lint.el

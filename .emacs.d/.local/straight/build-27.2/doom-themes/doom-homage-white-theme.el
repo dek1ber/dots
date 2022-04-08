@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/themes/themes/doom-homage-white-theme.el

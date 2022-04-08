@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/highlight-quoted/highlight-quoted.el

@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/emacs-deferred/deferred.el

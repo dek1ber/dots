@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/eshell-syntax-highlighting/eshell-syntax-highlighting.el

@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/projectile-rails/projectile-rails.el

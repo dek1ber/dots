@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/dtrt-indent/dtrt-indent-diag.el

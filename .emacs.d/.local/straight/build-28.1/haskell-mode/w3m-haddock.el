@@ -1,1 +1,0 @@
-/home/k1ber/.emacs.d/.local/straight/repos/haskell-mode/w3m-haddock.el
