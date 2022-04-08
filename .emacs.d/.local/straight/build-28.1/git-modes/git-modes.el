@@ -1,0 +1,1 @@
+/home/k1ber/.emacs.d/.local/straight/repos/git-modes/git-modes.el

@@ -1,0 +1,1 @@
+/home/k1ber/.emacs.d/.local/straight/repos/emacs-go-tag/go-tag.el

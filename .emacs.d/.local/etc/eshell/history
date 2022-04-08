@@ -1,0 +1,4 @@
+ps aux
+ps aux | grep emacs
+nvim
+zsh 

@@ -1,0 +1,1 @@
+/home/k1ber/.emacs.d/.local/straight/repos/ob-go/test-ob-go.el

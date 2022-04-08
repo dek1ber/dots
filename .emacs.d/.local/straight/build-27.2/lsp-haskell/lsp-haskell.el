@@ -1,0 +1,1 @@
+/home/k1ber/.emacs.d/.local/straight/repos/lsp-haskell/lsp-haskell.el
