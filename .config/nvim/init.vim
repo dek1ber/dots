@@ -10,3 +10,7 @@ colorscheme desert
 set encoding=utf-8
 filetype plugin on
 set number relativenumber
+
+set expandtab
+set ignorecase
+set smartcase

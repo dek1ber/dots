@@ -9,9 +9,9 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 nitrogen --restore &
 xsetroot -cursor_name left_ptr
-xinput --set-prop 'SynPS/2 Synaptics TouchPad' 336 1
-xinput --set-prop 'SynPS/2 Synaptics TouchPad' 344 1
 picom -f &
+
+emacs --daemon &
 
 dwmblocks &
 exec dwm

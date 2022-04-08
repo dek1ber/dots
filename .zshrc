@@ -9,6 +9,7 @@ HISTFILE=~/.zhistory
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+
 # Git
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
@@ -19,15 +20,15 @@ zstyle ':vcs_info:git:*' formats '%b'
 
 # Aliases
 alias /="cd /"
-alias m="cd /home/k1ber/mechaDOCS"
 alias rd="rmdir"
 alias md="mkdir -p"
-alias la="ls -al"
+alias ls="ls --color"
+alias la="ls -Al"
 
 alias -s txt=nvim
 alias -s py=nvim
-alias -s c=subl
-alias -s h=subl
+alias -s c=nvim
+alias -s h=nvim
 
 # Keybinds
 bindkey "^[[1;5C" forward-word
@@ -37,6 +38,11 @@ bindkey "^[[1;5D" backward-word
 setopt autocd
 stty stop undef
 
-source /usr/share/zsh/plugins/sublime/sublime.plugin.zsh 2>/dev/null
+# Security
+export AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+alias curl="curl -A '$AGENT'"
+alias wget="wget -U '$AGENT'"
+alias nmap="nmap --script-args=\"http.useragent='$AGENT'\""
+
 source /usr/share/zsh/plugins/safe-paste/safe-paste.plugin.zsh 2>/dev/null
 source /usr/share/zsh/plugins/git/git.plugin.zsh 2>/dev/null

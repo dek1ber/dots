@@ -6,11 +6,12 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static char *font6 = "JetBrainsMonoMedium:pixelsize=10";
-static char *font3 = "HackNerdFont:pixelsize=10";
-static char *font4 = "NotoColorEmoji:fontoformat=truetype:scale=10:antialias=false";
-/*static char *font5 = "IPAGothic:fontformat=truetype:pixelsize=10:antialias=false";*/
+
+//static char *font = "HackNerdFont:pixelsize=9";
+//static char *font = "JoyPixels:pixelsize=10:antialias=true:autohint=true";
+//static char *font = "JetBrainsMonoMedium:pixelsize=10";
+//static char *font = "NotoColorEmoji:fontoformat=truetype:scale=10:antialias=false";
+//static char *font = "IPAGothic:fontformat=truetype:pixelsize=10:antialias=false";
 static int borderpx = 2;
 
 /*

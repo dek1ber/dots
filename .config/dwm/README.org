@@ -1,3 +1,5 @@
+#+TITLE: Readme
+
 /* See LICENSE file for copyright and license details. */
 
 #include <X11/XF86keysym.h>
@@ -32,7 +34,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   first window centered monitor */
-	{ "Firefox",  NULL,       NULL,       1,       	    0,		 0,           -1 },
+	{ "brave",  NULL,       NULL,       1,       	    0,		 0,           -1 },
 	{ "st",  NULL,       NULL,            0,       	    0,		 1,           -1 },
 };
 
@@ -62,8 +64,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browsecmd[] = { "firefox", NULL};
+static const char *browsecmd[] = { "brave", NULL};
 static const char *texteditorcmd[] = { "subl", NULL};
+static const char *emacscmd[] = {"emacsclient", "-c", "-a", "'emacs'", NULL};
 static const char *upvol[]   = { "/usr/bin/pamixer", "-i", "5",     NULL };
 static const char *downvol[] = { "/usr/bin/pamixer", "-d", "5",     NULL };
 static const char *mutevol[] = { "/usr/bin/pamixer", "-t",  NULL };
@@ -76,6 +79,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,        	XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browsecmd} },
 	{ MODKEY,                       XK_s,      spawn,          {.v = texteditorcmd} },
+	{ MODKEY,                       XK_e,      spawn,          {.v = emacscmd} },
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
@@ -127,4 +131,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-

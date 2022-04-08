@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Status bar module for disk space
+# Script for storage (used storage / total storage)
 # $1 should be drive mountpoint, otherwise assumed /.
 
 location=${1:-/}

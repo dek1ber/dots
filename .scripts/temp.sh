@@ -1,3 +1,4 @@
 #!/bin/bash
 
+# Script to find current temp of machine
 sensors | awk '/Core 0/ {print "🔥 " $3}'

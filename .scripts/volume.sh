@@ -1,3 +1,7 @@
+#!/bin/bash
+
+#Script to get current volume
+
 vol="$(pamixer --get-volume)"
 
 if [ "$vol" -gt "70" ]; then
