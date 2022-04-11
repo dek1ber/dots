@@ -1,17 +1,27 @@
 ARCH LINUX
 ==========
-These dot files are intended for use on any linux distro, but all the dependencies are ARCH LINUX specific
+I'm rocking an Arch Linux setup on my stationary production machine, and a standard Fedora setup on my laptop (XFCE ftw). Mostly using DWM at the moment: https://dwm.suckless.org/ + st (also from suckless) + dwmblocks (https://github.com/torrinfail/dwmblocks) + slock (wow also from suckless). 
+The .scripts dir has some fun dwmblocks modules.
 
-> git clone https://github.com/KevinKusiak/dots.git
+This repo has BSPWM + polybar + sxhkd setup as well so feel free to use that (look up how to install bspwm, sxhkd, and polybar in arch)
+
+I lowkey switched to Doom Emacs, so got that and my neovim setup in here as well. Plus ZSH (>>>>> bash). 
+
+> git clone https://github.com/dek1ber/dots.git
 
 # Dependencies
-	sudo pacman -Syy xorg-server xorg-xinit xorg-xsetroot xorg-xrandr firefox nitrogen picom git go bspwm neovim sxhkd terminator zsh  gcc make dmenu base-devel
+	sudo pacman -Syy xorg-server xorg-xinit \
+	xorg-xsetroot xorg-xrandr firefox nitrogen \
+	picom git go neovim sxhkd terminator \
+	zsh gcc make dmenu base-devel
 
 ## AUR Dependencies
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
-	yay -Syy ttf-joypixels ttf-jetbrains-mono nerd-fonts-hack noto-color-emoji-fontconfig gimp sublime-text-4 libxft-bgra
+	yay -Syy ttf-joypixels \
+	noto-color-emoji-fontconfig gimp sublime-text-4 \
+	libxft-bgra
 
 ## Cleaning Up
 	cd 
@@ -32,7 +42,7 @@ These dot files are intended for use on any linux distro, but all the dependenci
 
 ## Setting up ZSH
 	chsh -s $(which zsh)
-From this point either reboot your computer (if you are in the tty), or reboot your terminal (if you are in the window manager)
+From this point logout 
 
 ## Installing Suckless Tools
 	cd .config/dwm/
