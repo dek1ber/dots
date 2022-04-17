@@ -13,7 +13,7 @@ I lowkey switched to Doom Emacs, so got that and my neovim setup in here as well
 	sudo pacman -Syy xorg-server xorg-xinit \
 	xorg-xsetroot xorg-xrandr firefox nitrogen \
 	picom git go neovim sxhkd terminator \
-	zsh gcc make dmenu base-devel
+	zsh gcc make dmenu base-devel emacs
 
 ## AUR Dependencies
 	git clone https://aur.archlinux.org/yay.git
