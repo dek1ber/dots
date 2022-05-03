@@ -23,7 +23,6 @@ alias rd="rmdir"
 alias md="mkdir -p"
 alias ls="ls --color"
 alias la="ls -Al"
-alias k="cd /home/k1ber/k1berDOCS"
 alias msi="sudo make clean install"
 
 alias -s txt=nvim
