@@ -2,13 +2,12 @@
 PS1="%B%F{red}[%f%F{green}%n%f%F{blue}@%f%F{yellow}%M%f %F{magenta}%~%f%F{red}]%f%b$ "
 
 # Auto complete
-autoload -Uz compinit; compinit; _comp_options+=(globdots);
+autoload -Uz compinit; zstyle ':completion:*' menu select; compinit; _comp_options+=(globdots);
 
 # Hist
 HISTFILE=~/.zhistory
 HISTSIZE=1000000
 SAVEHIST=1000000
-
 
 # Git
 autoload -Uz vcs_info
@@ -24,6 +23,8 @@ alias rd="rmdir"
 alias md="mkdir -p"
 alias ls="ls --color"
 alias la="ls -Al"
+alias k="cd /home/k1ber/k1berDOCS"
+alias msi="sudo make clean install"
 
 alias -s txt=nvim
 alias -s py=nvim

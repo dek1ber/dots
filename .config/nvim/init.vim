@@ -14,3 +14,5 @@ set number relativenumber
 set expandtab
 set ignorecase
 set smartcase
+
+autocmd BufWritePost ~/.config/dwmblocks/blocks.h !cd ~/.config/dwmblocks/; sudo make install && (killall -q dwmblocks; setsid -f dwmblocks)

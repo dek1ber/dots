@@ -1,0 +1,3 @@
+#!/bin/bash
+
+iwconfig wlp0s20f3 | grep -iE --color "Bit Rate" | awk -F '[:=]' 'NR==FNR {print $2}' | sed 's/Mb.*//'
