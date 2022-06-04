@@ -24,6 +24,8 @@ alias md="mkdir -p"
 alias ls="ls --color"
 alias la="ls -Al"
 alias msi="sudo make clean install"
+alias n="nvim"
+alias i="nvim ~/.config/nvim/init.lua"
 
 alias -s txt=nvim
 alias -s py=nvim

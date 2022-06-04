@@ -3,9 +3,14 @@
 #
 
 # terminal emulator
-super + Return
+super + shift + Return
 	st
 
+# rofi app-launcher
+super + a 
+  ~/.config/rofi/launchers/colorful/launcher.sh
+
+# VOLUME 
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5%
 
@@ -17,7 +22,7 @@ XF86AudioMute
 
 # launch firefox
 super + b
-	firefox
+	brave-browser
 
 # program launcher
 #super + @space
