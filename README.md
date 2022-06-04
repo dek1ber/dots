@@ -13,7 +13,7 @@ The .config/nvim files are ALWAYS a work in progress but I've finally added some
 # Dependencies + Some Apps I Need and Like (BIG wip)
 	sudo dnf install nitrogen picom bspwm \
 	polybar neovim libX11-devel libXft-devel \
-	libXinerama-devel sxhkd dmenu rofi
+	libXinerama-devel sxhkd dmenu rofi xrandr xsetroot
 	
 ## Cleaning Up
 	cd 
