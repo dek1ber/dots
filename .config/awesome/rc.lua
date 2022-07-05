@@ -43,10 +43,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
--- beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "copland"))
-beautiful.useless_gap = 5
-beautiful.gap_single_client = true
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(string.format("%s/.config/awesome/theme.lua", os.getenv("HOME")))
 
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
@@ -168,6 +166,9 @@ end
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
+local cal = wibox.widget.calendar.month(os.date('*t'))
+
+
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
@@ -256,6 +257,10 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey, "Shift"   }, "c", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
+
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%", false) end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%", false) end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle", false) end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
