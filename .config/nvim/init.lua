@@ -10,3 +10,8 @@ require "k1ber.autopairs"
 require "k1ber.project"
 require "k1ber.impatient"
 require "k1ber.indentline"
+
+-- Testing
+require "k1ber.org"
+require "k1ber.lualine"
+require "k1ber.tree"

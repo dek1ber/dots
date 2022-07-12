@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/k1ber/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  neorg = {
+    loaded = true,
+    path = "/home/k1ber/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
+  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/home/k1ber/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
