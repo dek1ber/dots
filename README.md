@@ -1,6 +1,6 @@
 FEDORA LINUX
 ==========
-I'm rocking a Fedora Linux setup on my stationary production machine, and PopOS on my laptop. 
+I'm rocking a Fedora Linux setup on both my stationary production machine, and my laptop. 
 
 I've been a longtime DWM (https://dwm.suckless.org/) user but I recently switched to BSPWM cause the DWM extensibility reached a peak for me and I wanted to try something else out. The scripts in the .scripts dir are mostly for my dwmblocks (https://github.com/torrinfail/dwmblocks) setup rip. I still use and LOVE the st by suckless.
 
