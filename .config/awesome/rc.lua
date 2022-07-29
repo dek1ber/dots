@@ -70,12 +70,12 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile.left,
-    awful.layout.suit.tile,
-    awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.corner.nw,
     awful.layout.suit.floating,
+    -- awful.layout.suit.corner.nw,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile,
     -- awful.layout.suit.max.fullscreen,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.magnifier,
@@ -580,6 +580,6 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
--- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
--- client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
