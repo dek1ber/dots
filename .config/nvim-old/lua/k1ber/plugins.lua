@@ -15,6 +15,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -33,7 +34,7 @@ packer.init {
   display = {
     open_fn = function()
       return require("packer.util").float { border = "rounded" }
-		end,
+    end,
   },
 }
 
@@ -62,7 +63,6 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use 'dracula/vim'
-  use 'tanvirtin/monokai.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -91,6 +91,8 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+
 
   -- Git
   use "lewis6991/gitsigns.nvim"
