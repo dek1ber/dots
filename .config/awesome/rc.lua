@@ -55,7 +55,7 @@ awful.mouse.snap.edge_enabled = false
 
 
 -- This is used later as the default terminal and editor to run.
-terminal = "st"
+terminal = "alacritty"
 -- editor = os.getenv("EDITOR") or "vi"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
@@ -515,7 +515,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
+      }, properties = { titlebars_enabled = true }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.

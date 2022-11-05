@@ -13,7 +13,7 @@ local theme = {}
 
 theme.font          = "UbuntuMonoNerdFont 10"
 
-theme.wallpaper = "~/wall/wall.png"
+theme.wallpaper = "~/k1berDOCS/wall/wall.png"
 
 theme.bg_normal     = "#1d1f21"
 theme.bg_focus      = "#333333"
