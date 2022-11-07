@@ -1,19 +1,16 @@
-FEDORA LINUX
+Arch LINUX
 ==========
-I'm rocking a Fedora Linux setup on both my stationary production machine, and my laptop. 
+I'm rocking an Arch Linux setup on both my stationary production machine, and my laptop. 
 
-I've been a longtime DWM (https://dwm.suckless.org/) user but I recently switched to BSPWM cause the DWM extensibility reached a peak for me and I wanted to try something else out. The scripts in the .scripts dir are mostly for my dwmblocks (https://github.com/torrinfail/dwmblocks) setup rip. I still use and LOVE the st by suckless.
-
-I'm using polybar with BSPWM with some rofi plugins. 
+I've been a longtime DWM (https://dwm.suckless.org/) user but I recently switched to Awesome cause the DWM extensibility reached a peak for me and I wanted to try something else out. The scripts in the .scripts dir are mostly for my dwmblocks (https://github.com/torrinfail/dwmblocks) setup rip. I still use and LOVE the st by suckless.
 
 The .config/nvim files are ALWAYS a work in progress but I've finally added some lsp stuff (and of course telescope) as well as turning my config files to lua (might add an init.vim file in there soon though). I'll start working on a neovim plugin soon so expect to see that in here soon as well.
 
 > git clone https://github.com/dek1ber/dots.git
 
 # Dependencies + Some Apps I Need and Like (BIG wip)
-	sudo dnf install nitrogen picom bspwm \
-	polybar neovim libX11-devel libXft-devel \
-	libXinerama-devel sxhkd dmenu rofi xrandr xsetroot
+	sudo pacman -S nitrogen awesome alacritty firefox \
+	neovim xorg-xrandr xorg-xsetroot xorg-server xorg-xinit \ 
 	
 ## Cleaning Up
 	cd 
