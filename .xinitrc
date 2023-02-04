@@ -30,13 +30,10 @@ fi
 
 ~/.scripts/multi
 
-nitrogen --restore &
 xsetroot -cursor_name left_ptr
-picom -f &
+picom --vsync --backend=glx &
 nm-applet & 
 flameshot &
-
-
 
 item=$(xinput | grep "Synaptics TouchPad" | sed 's/.*id=//' | cut -c 1-2)
 
