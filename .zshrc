@@ -1,4 +1,7 @@
-PS1='%B%F{red}[%f%F{green}%n%f%F{blue}@%f%F{yellow}%M%f %F{magenta}%~%f%F{red}]%f%b$ '
+PS1='%B%F{red}[%f%F{green}%n%f%F{green}@%f%F{green}%M%f %F{green}%~%f%F{red}]%f%b$ '
+
+# Deprecated below!
+#PS1='%B%F{red}[%f%F{green}%n%f%F{blue}@%f%F{yellow}%M%f %F{magenta}%~%f%F{red}]%f%b$ '
 
 setopt autocd
 setopt nonomatch
