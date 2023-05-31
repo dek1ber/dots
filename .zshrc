@@ -1,8 +1,5 @@
 PS1='%B%F{red}[%f%F{green}%n%f%F{green}@%f%F{green}%M%f %F{green}%~%f%F{red}]%f%b$ '
 
-# Deprecated below!
-#PS1='%B%F{red}[%f%F{green}%n%f%F{blue}@%f%F{yellow}%M%f %F{magenta}%~%f%F{red}]%f%b$ '
-
 setopt autocd
 setopt nonomatch
 
@@ -42,7 +39,6 @@ alias ll="ls -l"
 alias msi="sudo make clean install"
 alias n="nvim"
 alias i="nvim ~/.config/nvim/init.lua"
-alias k="cd /home/k1ber/k1berDOCS/"
 alias vol="pactl get-sink-volume @DEFAULT_SINK@"
 
 # Editor Aliases
@@ -60,5 +56,3 @@ export AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 alias curl="curl -A '$AGENT'"
 alias wget="wget -U '$AGENT'"
 alias nmap="nmap --script-args=\"http.useragent='$AGENT'\""
-
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
