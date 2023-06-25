@@ -1,0 +1,17 @@
+#!/usr/bin/bash 
+
+RED="\e[0;91m"
+BLUE="\e[0;94m"
+GREEN="\e[0;92m"
+BOLD="\e[1m"
+RESET="\e[0m"
+
+
+function __bsd_dev__() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Updating packages${RESET}\n"
+  pkg update;
+
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Starting install of the BSD dev packages${RESET}\n"
+  pkg install pkgconf python3 boost-libs openssl sqlite3 \
+  doxygen graphviz py37-sphinx neovim;
+}

@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+RED="\e[0;91m"
+BLUE="\e[0;94m"
+GREEN="\e[0;92m"
+BOLD="\e[1m"
+RESET="\e[0m"
+
+function __ubuntu_dev__() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Updating system${RESET}\n"
+  apt-get update && apt-get upgrade -y;
+
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Install main packages from apt repos ${RESET}\n"
+  sudo apt install -y build-essential pkg-config \
+    python3 libboost-all-dev libssl-dev \
+    libsqlite3-dev doxygen graphviz python3-pip \
+    git tmux libx11-dev libxrandr-dev libxinerama-dev \
+    libxft-dev neovim gcc make perl g++ libbluetooth-dev \
+    liblzma-dev emacs zsh android* bluez* binutil* \
+    bison bazel* bpfcc* cpp* dalvik-exchange;
+
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Installing pip packages${RESET}\n"
+  pip3 install jedi pwntools pycryptodome \
+    setuptools yara python-socketio pyelftools \
+    websockets urllib3 binwalk sphinx \
+    sphinxcontrib-doxylink;
+}

@@ -1,6 +1,0 @@
-#!/bin/sh
-
-bat_lvl=$(cat /sys/class/power_supply/BAT0/capacity)
-bat=🔋
-
-echo "$bat $bat_lvl"

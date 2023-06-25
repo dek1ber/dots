@@ -1,0 +1,43 @@
+#!/usr/bin/bash
+
+# Script to bootstrap over all my dotfiles to a running system
+
+CLONE_DIR=$(pwd)
+RED="\e[0;91m"
+BLUE="\e[0;94m"
+GREEN="\e[0;92m"
+BOLD="\e[1m"
+RESET="\e[0m"
+
+clean() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Cleaning up current configs${RESET}\n"
+  rm -rf /home/$USER/.tmux.conf  /home/$USER/.zshrc /home/$USER/.vimrc /home/$USER/.xinitrc /home/$USER/.scripts 
+  rm -rf /home/$USER/.config/nvim /home/$USER/.config/awesome /home/$USER/.config/slock /home/$USER/.config/st 
+}
+
+strap() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Bootstrapping configs${RESET}\n"
+  ln -s $CLONE_DIR/.tmux.conf /home/$USER/.tmux.conf
+  ln -s $CLONE_DIR/.zshrc /home/$USER/.zshrc
+  ln -s $CLONE_DIR/.vimrc /home/$USER/.vimrc
+  ln -s $CLONE_DIR/.xinitrc /home/$USER/.xinitrc
+  ln -s $CLONE_DIR/scripts /home/$USER/.scripts
+  ln -s $CLONE_DIR/config/nvim /home/$USER/.config/nvim
+  ln -s $CLONE_DIR/config/awesome /home/$USER/.config/awesome
+  ln -s $CLONE_DIR/config/slock /home/$USER/.config/slock
+  ln -s $CLONE_DIR/config/st /home/$USER/.config/st
+}
+
+clean
+strap
+
+printf "${GREEN}Do you want to enter the workflows setup (if running in a VM)?${RESET}\nPlease enter \"Yes\" if you want to progress\n${RED}"
+read VM
+
+VM=${VM,,}
+
+if [ "$VM" = "yes" ]; then 
+  cd workflows && ./setup $USER
+else 
+  exit
+fi

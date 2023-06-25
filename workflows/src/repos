@@ -1,0 +1,126 @@
+#!/usr/bin/bash
+
+RED="\e[0;91m"
+BLUE="\e[0;94m"
+GREEN="\e[0;92m"
+BOLD="\e[1m"
+RESET="\e[0m"
+
+function __repos__ () {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Starting install of the pentest github repos${RESET}\n"
+  mkDirectories
+  exploits
+  postExploit
+  wordlists
+  privEsc
+  socialEngineering
+  reverseEngineering
+  wireless
+  backdoor
+  revShells
+
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Correcting user rights of /opt/tools${RESET}\n"
+  chown -R $1:$1 /opt/tools
+}
+
+function mkDirectories() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Creating default core tools directory${RESET}\n"
+  mkdir /opt/tools
+  mkdir /opt/tools/exploits
+  mkdir /opt/tools/postExploit
+  mkdir /opt/tools/wordlists
+  mkdir /opt/tools/privEsc
+  mkdir /opt/tools/socialEngineering
+  mkdir /opt/tools/RE
+  mkdir /opt/tools/wireless
+  mkdir /opt/tools/backdoor
+  mkdir /opt/tools/revShells
+}
+
+function exploits() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in main exploit tools${RESET}\n"
+  cd /opt/tools/exploits
+  git clone https://github.com/longld/peda.git
+  git clone https://github.com/govolution/avet
+  git clone https://github.com/g0tmi1k/exe2hex.git
+  git clone https://github.com/huntergregal/mimipenguin
+  git clone https://github.com/lockfale/meterpreterjank.git
+  git clone https://github.com/PenturaLabs/Linux_Exploit_Suggester.git
+  git clone https://github.com/vulnersCom/getsploit
+  git clone https://github.com/trustedsec/unicorn
+}
+
+function postExploit() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding post-exploitation tools${RESET}\n"
+  cd /opt/tools/postExploit
+  git clone https://github.com/AlessandroZ/LaZagne.git
+  git clone https://github.com/CoreSecurity/impacket.git
+  pip install ldap3
+  git clone https://github.com/BC-SECURITY/Empire.git
+  git clone https://github.com/BC-SECURITY/Starkiller.git
+}
+
+function wordlists() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in wordlists${RESET}\n"
+  cd /opt/tools/wordlists
+  git clone https://github.com/danielmiessler/SecLists.git
+  wget -nc http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2
+  git clone https://github.com/digininja/CeWL.git
+}
+
+function privEsc() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in privesc tools${RESET}\n"
+  cd /opt/tools/privEsc
+  git clone https://github.com/mattifestation/PowerSploit.git
+  git clone https://github.com/putterpanda/mimikittenz.git
+  git clone https://github.com/PowerShellEmpire/PowerTools.git
+  git clone https://github.com/Kevin-Robertson/Inveigh.git
+  git clone https://github.com/xan7r/kerberoast.git
+  git clone https://github.com/breenmachine/RottenPotatoNG
+}
+
+function socialEngineering() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in social engineering tools${RESET}\n"
+  cd /opt/tools/socialEngineering
+  git clone https://github.com/trustedsec/social-engineer-toolkit.git
+  git clone https://github.com/philwantsfish/shard
+  git clone https://github.com/mwrlabs/XRulez.git
+  git clone https://github.com/dafthack/MailSniper.git
+  git clone https://github.com/ustayready/CredSniper
+  wget -nc https://github.com/gophish/gophish/releases/download/v0.5.0/gophish-v0.5.0-linux-64bit.zip
+}
+
+function reverseEngineering() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in reverse engineering tools${RESET}\n"
+  cd /opt/tools/RE
+  git clone https://github.com/Gallopsled/pwntools.git
+  git clone https://github.com/hasherezade/shellconv.git
+  git clone https://github.com/botherder/viper.git
+  wget -nc "https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui-1.4.0.jar"
+  git clone https://github.com/mirror/firmware-mod-kit.git
+}
+
+function wireless() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in wireless tools${RESET}\n"
+  cd /opt/tools/wireless
+  git clone https://github.com/DanMcInerney/wifijammer.git
+  git clone https://github.com/derv82/wifite.git
+  git clone https://github.com/OpenSecurityResearch/hostapd-wpe.git
+  git clone https://github.com/sophron/wifiphisher.git
+  git clone https://github.com/s0lst1c3/eaphammer.git
+  git clone https://github.com/Tylous/SniffAir.git
+  git clone https://github.com/tehw0lf/airbash.git
+}
+
+function backdoor() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in backdoor tools${RESET}\n"
+  cd /opt/tools/backdoor
+  git clone https://github.com/gold1029/The-backdoor-factory.git
+}
+
+function revShells() {
+  printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Adding in uploadable reverse shells${RESET}\n"
+  cd /opt/tools/revShells
+  wget -nc http://pentestmonkey.net/tools/php-reverse-shell/php-reverse-shell-1.0.tar.gz
+  tar -xf /opt/tools/revShells/php-reverse-shell-1.0.tar.gz
+}

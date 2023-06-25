@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+. ./src/bsd_dev
+. ./src/offsec
+. ./src/repos
+. ./src/ubuntu_dev
+
+RED="\e[0;91m"
+BLUE="\e[0;94m"
+GREEN="\e[0;92m"
+BOLD="\e[1m"
+RESET="\e[0m"
+
+cleanup_dirs() {
+  rmdir /home/$user/Desktop /home/$user/Documents /home/$user/Music /home/$user/Pictures /home/$user/Public /home/$user/Templates /home/$user/Videos
+}
+
+user=$1
+
+[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
+
+echo $user
+
+printf "${GREEN}Select your setup:\n${BLUE}[${GREEN}1${BLUE}] Offsec Full (Git Repos + Packages on a Kali/Parrot/Ubuntu instance)\n${BLUE}[${GREEN}2${BLUE}] Offsec Minimal (Packages Only)\n${BLUE}[${GREEN}3${BLUE}] Ubuntu Development\n${BLUE}[${GREEN}4${BLUE}] BSD Development\n${RED}"
+read choice 
+
+case $choice in 
+  "1")
+    __repos__ $user;
+    __offsec__;;
+  "2")
+    __offsec__;;
+  "3")
+    __ubuntu_dev__ $user;;
+  "4")
+    __bsd_dev__ $user;;
+esac
+
+cleanup_dirs

@@ -7,6 +7,7 @@ setopt nonomatch
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+#set -o vi
 
 # Hist
 HISTFILE=~/.zhistory
@@ -29,30 +30,39 @@ setopt prompt_subst
 RPROMPT='${vcs_info_msg_0_}'
 zstyle ':vcs_info:git:*' formats '%b'
 
-# Aliases
-alias /="cd /"
+# Navigation aliases
 alias rd="rmdir"
 alias md="mkdir -p"
 alias ls="ls --color"
-alias la="ls -al"
+alias la="ls -a"
 alias ll="ls -l"
+alias lal="ls -al"
+alias lr="ls -alr"
+
+# Not in use anymore
+# alias n="nvim"
+
+# Docker Aliases
+alias docke="docker exec -it"
+alias dockps="docker ps -a"
+alias dockls="docker image ls"
+
+# Useful Aliases
+alias cht="curl cheat.sh/$"
 alias msi="sudo make clean install"
-alias n="nvim"
-alias i="nvim ~/.config/nvim/init.lua"
 alias vol="pactl get-sink-volume @DEFAULT_SINK@"
+alias n="vi"
 
 # Editor Aliases
-alias -s md=nvim
-alias -s py=nvim
-alias -s c=nvim
-alias -s cpp=nvim
-alias -s h=nvim
-alias -s rs=nvim
-alias -s go=nvim
-alias -s lua=nvim
+alias -s py=python3
 
 # Fun
 export AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
 alias curl="curl -A '$AGENT'"
 alias wget="wget -U '$AGENT'"
 alias nmap="nmap --script-args=\"http.useragent='$AGENT'\""
+
+# Exports
+export EDITOR=vim
+
+

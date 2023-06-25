@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Script to get current volume
+
+vol="$(pactl get-sink-volume @DEFAULT_SINK@| sed 's/%//')"
+
+if [ "$vol" == 'muted' ]; then
+        echo 🔇 && exit
+fi 
+
+if [ "$vol" -gt "70" ]; then
+	icon="🔊"
+elif [ "$vol" -gt "30" ]; then
+	icon="🔉"
+elif [ "$vol" -gt "0" ]; then
+	icon="🔈"
+fi
+
+echo "$icon $vol%"
