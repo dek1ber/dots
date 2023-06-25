@@ -7,7 +7,7 @@ setopt nonomatch
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-#set -o vi
+set -o vi
 
 # Hist
 HISTFILE=~/.zhistory
