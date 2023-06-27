@@ -64,5 +64,3 @@ alias nmap="nmap --script-args=\"http.useragent='$AGENT'\""
 
 # Exports
 export EDITOR=vim
-
-

@@ -9,3 +9,4 @@ set ruler
 colorscheme habamax
 highlight Comment ctermfg=green
 set mouse=a
+set noswapfile

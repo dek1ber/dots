@@ -39,5 +39,6 @@ VM=${VM,,}
 if [ "$VM" = "yes" ]; then 
   cd workflows && ./setup $USER
 else 
+  printf "${GREEN}Thanks, bye!${RESET}\n"
   exit
 fi
