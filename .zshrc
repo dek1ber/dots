@@ -52,6 +52,8 @@ alias cht="curl cheat.sh/$"
 alias msi="sudo make clean install"
 alias vol="pactl get-sink-volume @DEFAULT_SINK@"
 alias n="vi"
+alias sdu="sudo dnf5 update -y"
+alias dnf="dnf5"
 
 # Editor Aliases
 alias -s py=python3
