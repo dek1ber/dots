@@ -26,6 +26,7 @@ strap() {
   ln -s $CLONE_DIR/config/awesome /home/$USER/.config/awesome
   ln -s $CLONE_DIR/config/slock /home/$USER/.config/slock
   ln -s $CLONE_DIR/config/st /home/$USER/.config/st
+  ln -s $CLONE_DIR/config/emacs /home/$USER/.config/emacs
 }
 
 clean
