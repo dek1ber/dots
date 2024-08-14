@@ -40,7 +40,7 @@ alias lal="ls -al"
 alias lr="ls -alr"
 
 # Not in use anymore
-# alias n="nvim"
+alias n="nvim"
 
 # Docker Aliases
 alias docke="docker exec -it"
@@ -51,7 +51,6 @@ alias dockls="docker image ls"
 alias cht="curl cheat.sh/$"
 alias msi="sudo make clean install"
 alias vol="pactl get-sink-volume @DEFAULT_SINK@"
-alias n="vi"
 alias sdu="sudo dnf5 update -y"
 alias dnf="dnf5"
 
@@ -66,3 +65,5 @@ alias nmap="nmap --script-args=\"http.useragent='$AGENT'\""
 
 # Exports
 export EDITOR=vim
+
+. "$HOME/.cargo/env" 

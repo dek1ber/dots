@@ -12,7 +12,7 @@ RESET="\e[0m"
 clean() {
   printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Cleaning up current configs${RESET}\n"
   rm -rf /home/$USER/.tmux.conf  /home/$USER/.zshrc /home/$USER/.vimrc /home/$USER/.xinitrc /home/$USER/.scripts 
-  rm -rf /home/$USER/.config/nvim /home/$USER/.config/awesome /home/$USER/.config/slock /home/$USER/.config/st 
+  rm -rf /home/$USER/.config/nvim /home/$USER/.config/awesome /home/$USER/.config/slock /home/$USER/.config/st  /home/$USER/.config/emacs
 }
 
 strap() {

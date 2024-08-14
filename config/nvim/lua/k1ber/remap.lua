@@ -9,6 +9,9 @@ local vals = {
 	relativenumber = true,
 	splitbelow = true,
 	splitright = true,
+	tabstop = 2,
+	shiftwidth = 2,
+	softtabstop = 2,
 }
 
 for i,j in pairs(vals) do 
@@ -17,6 +20,8 @@ end
 
 vim.keymap.set("n", "<C-t>", ":tabnew<CR>")
 vim.keymap.set("n", "<C-w>", ":tabclose<CR>")
+vim.keymap.set("n", "<C-h>", ":tabprev<CR>")
+vim.keymap.set("n", "<C-l>", ":tabnext<CR>")
 
-vim.keymap.set("n", "<C-x>k", ":vsplit<CR>")
-vim.keymap.set("n", "<C-x>o", ":split<CR>")
+vim.keymap.set("n", "<leader>k", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>o", ":split<CR>")
