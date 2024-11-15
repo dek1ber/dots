@@ -11,8 +11,8 @@ RESET="\e[0m"
 
 clean() {
   printf "${BLUE}[${GREEN}*${BLUE}]${BOLD} Cleaning up current configs${RESET}\n"
-  rm -rf /home/$USER/.tmux.conf  /home/$USER/.zshrc /home/$USER/.vimrc /home/$USER/.xinitrc /home/$USER/.scripts 
-  rm -rf /home/$USER/.config/nvim /home/$USER/.config/awesome /home/$USER/.config/slock /home/$USER/.config/st  /home/$USER/.config/emacs
+  rm -rf /home/$USER/.tmux.conf /home/$USER/.zshrc /home/$USER/.vimrc /home/$USER/.xinitrc /home/$USER/.scripts
+  rm -rf /home/$USER/.config/nvim /home/$USER/.config/awesome /home/$USER/.config/slock /home/$USER/.config/st  /home/$USER/.config/emacs /home/$USER/.config/dwm /home/$USER/.config/dwmblocks
 }
 
 strap() {
@@ -27,6 +27,8 @@ strap() {
   ln -s $CLONE_DIR/config/slock /home/$USER/.config/slock
   ln -s $CLONE_DIR/config/st /home/$USER/.config/st
   ln -s $CLONE_DIR/config/emacs /home/$USER/.config/emacs
+  ln -s $CLONE_DIR/config/dwm /home/$USER/.config/dwm
+  ln -s $CLONE_DIR/config/dwmblocks /home/$USER/.config/dwmblocks
 }
 
 clean
