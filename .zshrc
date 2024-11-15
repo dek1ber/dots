@@ -39,9 +39,6 @@ alias ll="ls -l"
 alias lal="ls -al"
 alias lr="ls -alr"
 
-# Not in use anymore
-alias n="nvim"
-
 # Docker Aliases
 alias docke="docker exec -it"
 alias dockps="docker ps -a"
@@ -51,8 +48,8 @@ alias dockls="docker image ls"
 alias cht="curl cheat.sh/$"
 alias msi="sudo make clean install"
 alias vol="pactl get-sink-volume @DEFAULT_SINK@"
-alias sdu="sudo dnf5 update -y"
-alias dnf="dnf5"
+alias sdu="sudo dnf update -y"
+alias n="nvim"
 
 # Editor Aliases
 alias -s py=python3
