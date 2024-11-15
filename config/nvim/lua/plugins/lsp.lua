@@ -48,6 +48,7 @@ return {
 			require('lspconfig').bashls.setup({})
 			require('lspconfig').rust_analyzer.setup({})
 			require('lspconfig').lua_ls.setup({})
+			require('lspconfig').perlls.setup({})
 
 			vim.diagnostic.config({
 				virtual_text = true,
@@ -127,7 +128,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
-			ensure_installed = { "c", "cpp", "rust", "python" }
+			ensure_installed = { "c", "cpp", "rust", "python", "perl" }
 			sync_install = false
 			auto_install = true
 		end
