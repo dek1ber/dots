@@ -1,1 +1,1 @@
-require ("k1ber")
+require ("config")
