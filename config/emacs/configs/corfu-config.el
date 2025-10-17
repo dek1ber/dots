@@ -5,6 +5,7 @@
 ;; WAITING: haskell-mode sets tags-table-list globally, breaks tags-completion-at-point-function
 ;; TODO Default sort order should place [a-z] before punctuation
 
+
 (use-package corfu
 	:ensure t
 	:custom
@@ -43,10 +44,10 @@
 				completion-category-defaults nil
 				completion-category-overrides '((file (styles partial-completion)))))
 
-(add-hook 'eshell-mode-hook
-          (lambda ()
-            (setq-local corfu-auto nil)
-            (corfu-mode)))
+;; (add-hook 'eshell-mode-hook
+;;           (lambda ()
+;;             (setq-local corfu-auto nil)
+;;             (corfu-mode)))
 
 ;; (setq tab-always-indent 'complete)
 ;; (when (use-package orderless)
