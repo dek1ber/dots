@@ -43,12 +43,12 @@ return {
 				end,
 			})
 
-			require('lspconfig').pylsp.setup({})
-			require('lspconfig').clangd.setup({})
-			require('lspconfig').bashls.setup({})
-			require('lspconfig').rust_analyzer.setup({})
-			require('lspconfig').lua_ls.setup({})
-			require('lspconfig').perlls.setup({})
+			vim.lsp.enable('pylsp', {})
+			vim.lsp.enable('clangd', {})
+			vim.lsp.enable('bashls', {})
+			vim.lsp.enable('rust_analyzer', {})
+			vim.lsp.enable('lua_ls', {})
+			vim.lsp.enable('perlls', {})
 
 			vim.diagnostic.config({
 				virtual_text = true,
