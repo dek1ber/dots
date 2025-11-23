@@ -9,7 +9,7 @@ static const unsigned int gappx	    = 9;	/* gap pixel between windows */
 static const int smartgaps	    = 0;	/* 1 means no outer gap if only 1 windows*/
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_border[]      = "#086800";
 static const char col_gray1[]       = "#222222";
@@ -40,6 +40,8 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -82,7 +84,7 @@ static const char *brightdown[] = { "brightnessctl", "s", "10%-",  NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ XK_p,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,        	XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browsecmd } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emacscmd } },
@@ -128,7 +130,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|Mod1Mask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_i,      quit,           {0} },
 };
 
 /* button definitions */

@@ -47,8 +47,9 @@ return {
 			vim.lsp.enable('clangd', {})
 			vim.lsp.enable('bashls', {})
 			vim.lsp.enable('rust_analyzer', {})
-			vim.lsp.enable('lua_ls', {})
+			-- vim.lsp.enable('lua_ls', {})
 			vim.lsp.enable('perlls', {})
+			vim.lsp.enable('gopls', {})
 
 			vim.diagnostic.config({
 				virtual_text = true,
